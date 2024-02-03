@@ -12,6 +12,7 @@ function soloNumeros(array) {
 
   // Tu código aca:
 
+  
 }
 
 // No modifiques nada debajo de esta linea //

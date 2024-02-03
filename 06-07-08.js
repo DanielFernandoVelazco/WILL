@@ -12,6 +12,10 @@ function crearClasePersona() {
 
       // Tu código aca:
 
+      this.nombre = nombre;
+      this.edad = edad;
+      this.hobbies = hobbies;
+      this.amigos = amigos;
     }
 
     addFriend(nombre, edad) {
@@ -21,6 +25,12 @@ function crearClasePersona() {
 
       // Tu código aca:
 
+      let amigo = {
+        nombre,
+        edad,
+      };
+
+      this.amigos.push(amigo);
     }
 
     addHobby(hobby) {
@@ -29,6 +39,7 @@ function crearClasePersona() {
 
       // Tu código aca:
 
+      this.hobbies.push(hobby);
     }
     getFriends() {
       // El método 'getFriends' debe retornar un arreglo con sólo los nombres del arreglo de amigos
@@ -39,6 +50,13 @@ function crearClasePersona() {
 
       // Tu código aca:
 
+      let nomAmigos = [];
+
+      for (let i of this.amigos) {
+        nomAmigos.push(i.nombre);
+      };
+
+      return nomAmigos;
     }
 
     getHobbies() {
@@ -48,6 +66,7 @@ function crearClasePersona() {
 
       // Tu código aca:
 
+      return this.hobbies;
     }
 
     getPromedioEdad() {
@@ -67,6 +86,13 @@ function crearClasePersona() {
 
       // Tu código aca:
 
+      let sumEdad = 0;
+
+      for (let i of this.amigos) {
+        sumEdad += i.edad;        
+      };
+
+      return (sumEdad/this.amigos.length);
     }
   };
 

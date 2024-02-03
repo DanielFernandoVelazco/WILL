@@ -12,7 +12,13 @@ function soloNumeros(array) {
 
   // Tu código aca:
 
-  
+  let resp = [];
+
+  for (let i of array) {
+    if (typeof(i) === 'number') resp.push(i);
+  };
+
+  return resp;
 }
 
 // No modifiques nada debajo de esta linea //
